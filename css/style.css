@@ -1,0 +1,109 @@
+/*************************************************
+    GENERAL STYLES
+ *************************************************/
+ * {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+ }
+
+/*************************************************
+GENERAL STYLES
+*************************************************/
+
+/*************************************************
+    STYLES
+ *************************************************/
+
+ /* CONTAINER */
+ .container{
+    width: 70vw;
+    margin: auto;
+    display: flex;
+ }
+ .container-img {
+    height: 70vh;
+    width: 100%;
+    margin-top: 10vh;
+    position: relative;
+ }
+
+ /* image list */
+ .image-list {
+    height: 100%;
+ }
+
+ /* image */
+ .image {
+    height: 100%;
+    position: relative;
+    
+ }
+ .img{
+    border: 5px solid black;
+    border-radius: 5px;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+ }
+ /* text */
+ .text{
+    text-shadow: 10px 5px 5px black;
+    color: white;
+    padding: 20px;
+    text-align: end;
+    position: absolute;
+    right: 0px;
+    bottom: 50px;
+ }
+
+ /* display */
+ .d-none{
+    display: none;
+ }
+ .d-block{
+    display: block;
+ }
+
+ /* thumb */
+ .thumb-container {
+    width: 150px;
+    height: 70vh;
+    margin-top: 10vh;
+}
+.thumb-wrapper {
+    /*height: calc(100% / 5);*/
+    filter: brightness(0.5);
+}
+.thumb-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+ .active {
+    filter: brightness(1);
+    border: solid 2px red;
+}
+
+
+ /* BUTTON */
+
+ .button {
+   cursor: pointer;
+   background-color: bisque;
+   border-radius: 50%;
+   width: 30px;
+   height: 30px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: absolute;
+   top: 50%;
+ }
+
+ #btn-next{
+   right: 0px;
+ }
+ #btn-prev{
+   left: 0px;
+ }
