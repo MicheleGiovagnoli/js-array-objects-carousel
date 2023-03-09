@@ -105,3 +105,5 @@ domBtnNext.addEventListener('click',
             thumbsDom[counter].classList.add('active');
     }
  );
+
+ 
