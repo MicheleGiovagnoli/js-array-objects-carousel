@@ -41,6 +41,7 @@ for(let i = 0; i < images.length; i++) {
                                     </div>    
                                 </div>
                             `;
+    
     const newThumb =    `<div class="thumb-wrapper">
                             <img class="thumb-img" src="${images[i].image}" />
                         </div>
@@ -74,27 +75,33 @@ domBtnPrev = document.querySelector('#btn-prev');
 
 domBtnNext.addEventListener('click',
     function(){
-        
-        if (counter < domDinamicImage.length - 1) {
+
             domDinamicImage[counter].classList.add('d-none');
             domDinamicImage[counter].classList.remove('d-block');
             thumbsDom[counter].classList.remove('active');
-            counter++;
+        if (counter == domDinamicImage.length - 1) {
+            counter = 0;
+        }
+        else {
+            counter = counter + 1;
+        }
             domDinamicImage[counter].classList.remove('d-none');
             thumbsDom[counter].classList.add('active');
-        }
     }
  );
 
  domBtnPrev.addEventListener('click',
     function(){
-        
-        if(counter > 0) {
+
             thumbsDom[counter].classList.remove('active');
             domDinamicImage[counter].classList.add('d-none');
+        if(counter == 0) {
+            counter = domDinamicImage.length -1 ;
+        }
+        else {
             counter--;
+        }
             domDinamicImage[counter].classList.remove('d-none');
             thumbsDom[counter].classList.add('active');
-        }
     }
  );
